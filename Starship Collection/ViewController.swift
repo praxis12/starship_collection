@@ -45,10 +45,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell()
         let selectedStarship = starships[indexPath.row]
         cell.textLabel?.text = selectedStarship.name!
-        cell.imageView?.image = UIImage(data: selectedStarship.image as! Data)
+        cell.imageView?.image = UIImage(data: selectedStarship.image! as Data)
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let starship = starships[indexPath.row]
+        performSegue(withIdentifier: "addShipSegue", sender: starship)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! AddShipViewController
+        nextVC.starship = sender as? Starship
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

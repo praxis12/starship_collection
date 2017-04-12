@@ -519,6 +519,7 @@
 				E3D818541E9D2A0F0090EFBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3D818551E9D2A0F0090EFBD /* Build configuration list for PBXNativeTarget "Starship CollectionTests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +528,7 @@
 				E3D818571E9D2A0F0090EFBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3D818581E9D2A0F0090EFBD /* Build configuration list for PBXNativeTarget "Starship CollectionUITests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +537,7 @@
 				E3D8185A1E9D2A0F0090EFBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

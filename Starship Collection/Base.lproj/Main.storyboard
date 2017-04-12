@@ -75,30 +75,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uw1-7u-Y48">
-                                <rect key="frame" x="172" y="344" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fk-rL-cab">
+                                <rect key="frame" x="173" y="339" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <action selector="addShipTapped:" destination="jc6-dz-mxm" eventType="touchUpInside" id="8dX-UJ-zbE"/>
+                                    <action selector="addUpdateButtonTapped:" destination="jc6-dz-mxm" eventType="touchUpInside" id="3fv-RZ-Aav"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6G-zO-zT9">
+                                <rect key="frame" x="165" y="377" width="45" height="30"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="jc6-dz-mxm" eventType="touchUpInside" id="Cvw-ib-A8U"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="J6G-zO-zT9" firstAttribute="top" secondItem="3Fk-rL-cab" secondAttribute="bottom" constant="8" id="0iP-HU-GYw"/>
                             <constraint firstItem="1bH-rU-lsp" firstAttribute="top" secondItem="OXD-hV-2Nx" secondAttribute="bottom" constant="20" id="3nz-cx-pWu"/>
                             <constraint firstItem="KgY-7Z-yb3" firstAttribute="centerX" secondItem="1bH-rU-lsp" secondAttribute="centerX" constant="-1" id="6JE-Df-muV"/>
+                            <constraint firstItem="3Fk-rL-cab" firstAttribute="centerX" secondItem="xsH-rK-jfJ" secondAttribute="centerX" id="AuO-0L-xNH"/>
                             <constraint firstItem="KgY-7Z-yb3" firstAttribute="top" secondItem="1bH-rU-lsp" secondAttribute="bottom" constant="21" id="DHF-fT-fxS"/>
-                            <constraint firstItem="Uw1-7u-Y48" firstAttribute="centerX" secondItem="xsH-rK-jfJ" secondAttribute="centerX" id="KQb-2Y-I6x"/>
-                            <constraint firstItem="Uw1-7u-Y48" firstAttribute="top" secondItem="KgY-7Z-yb3" secondAttribute="bottom" constant="29" id="cvY-19-MC0"/>
+                            <constraint firstItem="J6G-zO-zT9" firstAttribute="centerX" secondItem="xsH-rK-jfJ" secondAttribute="centerX" id="FRn-82-iPh"/>
+                            <constraint firstItem="3Fk-rL-cab" firstAttribute="top" secondItem="KgY-7Z-yb3" secondAttribute="bottom" constant="24" id="Hxg-0J-B38"/>
                             <constraint firstItem="1bH-rU-lsp" firstAttribute="centerX" secondItem="xsH-rK-jfJ" secondAttribute="centerX" id="r17-p4-G1V"/>
                             <constraint firstItem="KgY-7Z-yb3" firstAttribute="width" secondItem="1bH-rU-lsp" secondAttribute="width" id="tZ6-gI-Tcl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KjA-7O-Phi">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="zdj-Ql-Xne">
+                            <barButtonItem systemItem="camera" id="1s8-hw-l6h">
                                 <connections>
-                                    <action selector="cameraTapped:" destination="jc6-dz-mxm" id="TmQ-qU-9Kw"/>
+                                    <action selector="cameraTapped:" destination="jc6-dz-mxm" id="0sK-1E-gRL"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Photos" id="bQS-gS-Ruk">
@@ -109,6 +118,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="3Fk-rL-cab" id="W9q-OV-Osh"/>
+                        <outlet property="deleteButton" destination="J6G-zO-zT9" id="ADE-pc-wSd"/>
                         <outlet property="shipNameLabel" destination="KgY-7Z-yb3" id="IV0-Ib-TBt"/>
                         <outlet property="shipPhoto" destination="1bH-rU-lsp" id="nFR-MF-XXP"/>
                     </connections>
