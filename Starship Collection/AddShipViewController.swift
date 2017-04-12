@@ -46,6 +46,16 @@ class AddShipViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func addShipTapped(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let ship = Starship(context: context)
+        ship.name = shipNameLabel.text
+        ship.image = UIImagePNGRepresentation(shipPhoto.image!)! as NSData
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        navigationController?.popViewController(animated: true)
+        
+        
+        
     }
     
 }
