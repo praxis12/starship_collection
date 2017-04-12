@@ -15,6 +15,8 @@
 		E3D818381E9D2A0F0090EFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D818361E9D2A0F0090EFBD /* LaunchScreen.storyboard */; };
 		E3D818431E9D2A0F0090EFBD /* Starship_CollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D818421E9D2A0F0090EFBD /* Starship_CollectionTests.swift */; };
 		E3D8184E1E9D2A0F0090EFBD /* Starship_CollectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D8184D1E9D2A0F0090EFBD /* Starship_CollectionUITests.swift */; };
+		E3D8185C1E9D39390090EFBD /* Battlestar-Galactica-10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3D8185B1E9D39390090EFBD /* Battlestar-Galactica-10.jpg */; };
+		E3D8185E1E9D3BED0090EFBD /* AddShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D8185D1E9D3BED0090EFBD /* AddShipViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E3D818491E9D2A0F0090EFBD /* Starship CollectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Starship CollectionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D8184D1E9D2A0F0090EFBD /* Starship_CollectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship_CollectionUITests.swift; sourceTree = "<group>"; };
 		E3D8184F1E9D2A0F0090EFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3D8185B1E9D39390090EFBD /* Battlestar-Galactica-10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Battlestar-Galactica-10.jpg"; sourceTree = "<group>"; };
+		E3D8185D1E9D3BED0090EFBD /* AddShipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddShipViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		E3D818291E9D2A0F0090EFBD /* Starship Collection */ = {
 			isa = PBXGroup;
 			children = (
+				E3D8185B1E9D39390090EFBD /* Battlestar-Galactica-10.jpg */,
 				E3D8182A1E9D2A0F0090EFBD /* AppDelegate.swift */,
 				E3D8182C1E9D2A0F0090EFBD /* ViewController.swift */,
 				E3D8182E1E9D2A0F0090EFBD /* Main.storyboard */,
+				E3D8185D1E9D3BED0090EFBD /* AddShipViewController.swift */,
 				E3D818341E9D2A0F0090EFBD /* Assets.xcassets */,
 				E3D818361E9D2A0F0090EFBD /* LaunchScreen.storyboard */,
 				E3D818391E9D2A0F0090EFBD /* Info.plist */,
@@ -235,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3D8185C1E9D39390090EFBD /* Battlestar-Galactica-10.jpg in Resources */,
 				E3D818381E9D2A0F0090EFBD /* LaunchScreen.storyboard in Resources */,
 				E3D818351E9D2A0F0090EFBD /* Assets.xcassets in Resources */,
 				E3D818301E9D2A0F0090EFBD /* Main.storyboard in Resources */,
@@ -264,6 +271,7 @@
 			files = (
 				E3D8182D1E9D2A0F0090EFBD /* ViewController.swift in Sources */,
 				E3D8182B1E9D2A0F0090EFBD /* AppDelegate.swift in Sources */,
+				E3D8185E1E9D3BED0090EFBD /* AddShipViewController.swift in Sources */,
 				E3D818331E9D2A0F0090EFBD /* Starship_Collection.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

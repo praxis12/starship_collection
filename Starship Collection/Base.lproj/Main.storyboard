@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Azo-vy-aSV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Starship_Collection" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,9 +23,105 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="06X-wr-bnR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Um-wF-TKR">
+                            <connections>
+                                <segue destination="jc6-dz-mxm" kind="show" identifier="addShipSegue" id="tYh-BL-pDb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="860" y="137.18140929535232"/>
+        </scene>
+        <!--Add Ship View Controller-->
+        <scene sceneID="vHo-Kw-TJd">
+            <objects>
+                <viewController id="jc6-dz-mxm" customClass="AddShipViewController" customModule="Starship_Collection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OXD-hV-2Nx"/>
+                        <viewControllerLayoutGuide type="bottom" id="UcM-KR-Up4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xsH-rK-jfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Battlestar-Galactica-10.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1bH-rU-lsp">
+                                <rect key="frame" x="48" y="84" width="280" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="cx0-wE-22i"/>
+                                    <constraint firstAttribute="width" constant="280" id="s0C-2D-s3z"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Starship Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KgY-7Z-yb3">
+                                <rect key="frame" x="47" y="285" width="280" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uw1-7u-Y48">
+                                <rect key="frame" x="172" y="344" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addShipTapped:" destination="jc6-dz-mxm" eventType="touchUpInside" id="8dX-UJ-zbE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1bH-rU-lsp" firstAttribute="top" secondItem="OXD-hV-2Nx" secondAttribute="bottom" constant="20" id="3nz-cx-pWu"/>
+                            <constraint firstItem="KgY-7Z-yb3" firstAttribute="centerX" secondItem="1bH-rU-lsp" secondAttribute="centerX" constant="-1" id="6JE-Df-muV"/>
+                            <constraint firstItem="KgY-7Z-yb3" firstAttribute="top" secondItem="1bH-rU-lsp" secondAttribute="bottom" constant="21" id="DHF-fT-fxS"/>
+                            <constraint firstItem="Uw1-7u-Y48" firstAttribute="centerX" secondItem="xsH-rK-jfJ" secondAttribute="centerX" id="KQb-2Y-I6x"/>
+                            <constraint firstItem="Uw1-7u-Y48" firstAttribute="top" secondItem="KgY-7Z-yb3" secondAttribute="bottom" constant="29" id="cvY-19-MC0"/>
+                            <constraint firstItem="1bH-rU-lsp" firstAttribute="centerX" secondItem="xsH-rK-jfJ" secondAttribute="centerX" id="r17-p4-G1V"/>
+                            <constraint firstItem="KgY-7Z-yb3" firstAttribute="width" secondItem="1bH-rU-lsp" secondAttribute="width" id="tZ6-gI-Tcl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KjA-7O-Phi">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="zdj-Ql-Xne">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="jc6-dz-mxm" id="TmQ-qU-9Kw"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="bQS-gS-Ruk">
+                                <connections>
+                                    <action selector="photosTapped:" destination="jc6-dz-mxm" id="tpg-fh-6md"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shipNameLabel" destination="KgY-7Z-yb3" id="IV0-Ib-TBt"/>
+                        <outlet property="shipPhoto" destination="1bH-rU-lsp" id="nFR-MF-XXP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fdr-2S-eYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a8D-h3-ZDk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Azo-vy-aSV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1f2-QH-Af7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xOT-0Q-bwL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NT3-Ul-abJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.19999999999999" y="-545.57721139430294"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Battlestar-Galactica-10.jpg" width="2880" height="1620"/>
+    </resources>
 </document>
